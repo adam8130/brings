@@ -1,0 +1,252 @@
+
+/* color: rgb(255,195,60); */
+/* rgb(50,50,50); */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+/* header */
+
+.header{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    background-image: 
+    linear-gradient(rgba(50,50,50,0.3),rgba(50,50,50,0.3)),
+    url(img/juan-ordonez-j2c3xRURQQI-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+}
+.header img{
+    width: 150px;
+}
+.header img:hover{
+    transform: scale(1.2);
+}
+.header h2{
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.header button{
+    font-size: 16px;
+    margin-top: 15px;
+    width: 80px;
+    color: rgb(255,193,57);
+    background-color: rgb(50,50,50);
+    border-radius: 25px;
+    border: 1px solid rgb(255,193,57);
+    padding-bottom: 2px;
+}
+.header button:hover{
+    transform: scale(1.2);
+}
+.header nav a{
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(255,195,60);
+    font-weight: 500;
+    padding: 0 5px;
+    display: inline-block;
+}
+.header nav a:hover{
+    transform: translateY(-20%) scale(1.2);
+}
+
+/* container */
+
+.tittle{
+    width: 100%;
+    margin: 50px 0;
+    text-align: center;
+}
+.tittle p{
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: rgb(255,195,60); 
+    font-variant: small-caps;
+}
+.container{
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.item{
+    width: 30%;
+    margin: 20px 10px;
+    transition:
+    all 0.5s,
+    color 0s;
+}
+.item img{
+    width: 50%;
+}
+.item h4{
+    font-size: 16px;
+    font-weight: 200;
+}
+.container .item:hover{
+    transform: scale(1.2);
+    color: rgb(255,195,60);
+}
+
+/* footer */
+
+.footer{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    background-color: rgba(50,50,50);
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    padding: 5% 5% 5% 8%
+}
+.itema{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+.itema img{
+    width: 130px;
+}
+.itemb,
+.itemc,
+.itemd{
+    height: 100px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.footer div{
+    margin: 1.5% 0;
+    display: flex;
+}
+.item a:hover{
+    transform: translateY(-10%) scale(1.1);
+    color: rgb(255,195,60);
+}
+.footer .item i{
+    color: rgba(255,190,60,0.6);
+    margin-right: 3%;
+}
+.item a{
+    color: rgba(225,225,225,0.9);
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 1.1;
+}
+.item h2{
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 0 5px 0;
+    color: rgba(225,225,225,0.9);
+}
+.itema p{
+    font-size: 14px;
+    color: rgba(225,225,225,0.9);
+}
+.itema h4{
+    font-size: 14px;
+    color: rgba(255,190,60,0.8);
+}
+
+/* mobile */
+
+@media screen and (max-width:768px){
+    .header{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .header nav{
+        display: none;
+    }
+    .header button{
+        margin-top: 15%;
+    }
+
+    .tittle{
+        width: 90%;
+        margin: 10% auto;
+    }
+    .tittle p{
+        font-size: 18px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-content: center
+    }
+    .container .item{
+        width: 100%;
+    }
+    .footer{
+        height: 20vh;
+    }
+    .footer .itemb{
+        display: none;
+    }
+    .footer .itemc{
+        display: none;
+    }
+    .footer .itemd{
+        display: none;
+    }
+    .footer .item img{
+        width: 100px;
+        display: block;
+        margin: auto;
+    }
+    .footer .item{
+        text-align: center;
+    }
+
+    /* mobile */
+    .mbtn{
+        position: absolute;
+        top: 2%;
+        right: 2%;
+    }
+    .mbtn i{
+        font-size: 30px;
+        color: rgba(20,20,20,0.95);
+    }
+    .nav-m{
+        width: 70%;
+        height: 85%;
+        margin: auto;
+        background-color:
+        rgb(50,50,50,0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5% 0;
+        position: fixed;
+        top: 0;
+    }
+    .nav-m a{
+        width: 60%;
+        text-align: center;
+        text-decoration: none;
+        color: rgba(225,225,225,0.9);
+        padding: 5% 0;
+        font-size: 20px;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(225,225,225,0.9);
+    }
+    .nav-m a:hover{
+        transform: translateY(-10%)
+        scale(1.2);
+        color: rgb(255,190,60);
+    }
+}
