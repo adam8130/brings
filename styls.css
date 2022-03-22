@@ -12,7 +12,7 @@
 
 .header{
     width: 100%;
-    height: 250px;
+    height: 40vh;
     display: flex;
     justify-content: space-between;
     background-image: 
@@ -107,7 +107,7 @@
 
 .footer{
     width: 100%;
-    height: 130px;
+    height: 20vh;
     display: flex;
     background-color: rgba(50,50,50);
     font-family: Arial, Helvetica, sans-serif;
@@ -176,6 +176,11 @@
         display: flex;
         justify-content: center;
         text-align: center;
+        align-items: center;
+        height: 35vh;
+    }
+    .header img{
+        width: 120px;
     }
     .header nav{
         display: none;
@@ -183,10 +188,9 @@
     .header button{
         margin-top: 15%;
     }
-
     .tittle{
-        width: 90%;
-        margin: 20% auto;
+        width: 80%;
+        margin: 15% auto 10%;
     }
     .tittle p{
         font-size: 24px;
@@ -194,10 +198,10 @@
     .container{
         display: flex;
         flex-direction: column;
-        align-content: center
+        align-items: center;
     }
     .container .item{
-        width: 90%;
+        width: 70%;
     }
     .footer{
         width: 100%;
@@ -207,10 +211,8 @@
         justify-content: center;
         align-items: center;
     }
-    .footer .itemb,
-    .footer .itemc,
-    .footer .itemd{
-        display: none;
+    .footer .itema img{
+        width: 100px;
     }
     .footer .itema{
         width: 200px;
@@ -218,13 +220,20 @@
         justify-content: center;
         align-items: center;
         flex: initial;
+        font-family: 'Noto Serif JP', serif;
     }
-    .itema h4{
-        font-size: 16px;
+    .footer .itema h4{
+        font-size: 14px;
         letter-spacing: -1px;
         padding-bottom: 1%;
     }
-/* mobile nav*/
+    .footer .itemb,
+    .footer .itemc,
+    .footer .itemd{
+        display: none;
+    }
+
+    /* mobile nav*/
     .mbtn{
         display: block;
         position: absolute;
@@ -233,11 +242,13 @@
     }
     .mbtn i{
         font-size: 30px;
-        color: rgba(20,20,20,0.95);
+        font-weight: 600;
+        color: bisque;
     }
     .nav-m{
-        width: 60%;
-        height: 85%;
+        width: 50%;
+        height: 80vh;
+        border-radius: 0 20px 20px 0;
         background-color:
         rgb(50,50,50,0.95);
         display: flex;
@@ -245,41 +256,65 @@
         justify-content: center;
         padding: 5% 5%;
         position: fixed;
-        top: 0%;
+        top: 10%;
         left: -100%;
         padding-bottom: 10%;
+    }
+    .nav-m img{
+        width: 100px;
+        padding: 0 0 5% 0;
     }
     .nav-m div{
         display: flex;
         align-items: center;
     }
-    .nav-m div div{
+    .nav-m .dot{
         width: 6px;
         height: 6px;
         border-radius: 50%;
         background-color: bisque;
     }
+    .nav-m .serch{
+        position: relative;
+    }
+    .nav-m input{
+        width: 75%;
+        height: 25px;
+        margin: 5% 0 10% 0;
+        border-radius: 0 50px 50px 0;
+        border-radius: 50px;
+        padding-left: 5%;
+        /* margin-left: 10%; */
+        background-color: rgb
+        (225,225,225);
+    }
+    .nav-m input+i{
+        font-size: 10px;
+        position: absolute;
+        right: 30%;
+        top: 30%;
+        color: rgb(50,50,50);
+    }
     .nav-m i{
         color: rgba(225,225,225,0.9);
-        /* padding-bottom: 5px; */
+        cursor: pointer;
+        padding-left: 25% ;
+    }
+    .nav-m i:hover{
+        transform: translateY(-10%)
+        translateX(-8%)
+        scale(1.2);
+        color: rgb(255,190,60);
     }
     .nav-m a{
         width: 60%;       
         text-decoration: none;
         color: rgba(225,225,225,0.9);
-        padding: 5% 5%;
-        /* background-color: aqua; */
-        font-size: 20px;
+        padding: 5% 0 5% 10%;
+        font-size: 18px;
         letter-spacing: 2px;
-        /* border-bottom: 1px solid rgba(225,225,225,0.9); */
-        /* margin-bottom: 20px; */
         font-family: 'Noto Serif JP', serif;
         font-weight: 400;
-
-    }
-    .nav-m img{
-        width: 100px;
-        padding: 0 0 40px 0;
     }
     .nav-m a:hover{
         transform: translateY(-10%)
