@@ -7,6 +7,10 @@
     <title>Brings</title>
     <link rel="stylesheet" href="styls.css">
     <script src="https://kit.fontawesome.com/f3b1e1eda4.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- header -->
@@ -82,9 +86,9 @@
 
         <div class="item itema">
             <img src="img/Brings-cutout.png" alt="">
+            <h4>唯心所動 , 唯心所購</h4>  
             <p>Copyright &copy; 2022 Brings.
             </p>
-            <h4>唯心所動 , 唯心所購</h4>  
         </div>
 
         <div class="item itemb">
@@ -139,23 +143,52 @@
     </div>
 
     <div class="nav-m">
-        <a href="#">Home</a>
-        <a href="#">品牌介紹</a>
-        <a href="#">代購項目</a>
-        <a href="#">現貨商成</a>
-        <a href="#">購物車</a>
-        <a href="#">關於我們</a>
+        <img src="/img/Brings-cutout.png" alt="">
+        
+        
+        <div>
+            <div class="dot"></div>
+            <a href="#">Home</a>
+        </div>
+
+        <div>
+            <div class="dot"></div>
+            <a href="#">品牌介紹</a>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>   
+        <div>
+            <div class="dot"></div>
+            <a href="#">代購服務</a>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div>    
+            <div class="dot"></div>
+            <a href="#">現貨商城</a>
+        </div>
+        <div>    
+            <div class="dot"></div>
+            <a href="#">購物車</a>
+        </div>
+        <div>
+            <div class="dot"></div>
+            <a href="#">關於我們</a>
+        </div>
     </div>
 
 <script src="jquery-3.6.0.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $(".mbtn").click(function(){
-            $(".nav-m").toggle()
+        
+        $(".mbtn").on("click",function(){
+            
+                $(".nav-m").toggleClass('x')
+            
         })
+        
     })
 </script>
-    
+<!-- $(".nav-m").animate ({left:100}) -->
+
 
 </body>
 </html>
