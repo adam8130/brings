@@ -186,7 +186,7 @@
         justify-content: center;
         text-align: center;
         align-items: center;
-        height: 35vh;
+        height: 30vh;
     }
     .header img{
         width: 120px;
@@ -230,7 +230,7 @@
         width: 100px;
     }
     .footer .itema{
-        width: 200px;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -265,7 +265,7 @@
         display: block;
         position: absolute;
         top: 2%;
-        right: 2%;
+        right: 3%;
     }
     .mbtn i{
         font-size: 30px;
