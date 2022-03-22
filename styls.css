@@ -29,7 +29,7 @@
     transform: scale(1.2);
 }
 .header h4{
-    color: rgba(225,225,225);
+    color: white;
     font-weight: 500;
     font-size: 16px;
     margin-top: 10px;
@@ -200,6 +200,7 @@
         color: rgba(225,225,225,0.9);
         
         font-size: 14px;
+        display: none;
     }
     .tittle{
         width: 80%;
@@ -220,14 +221,11 @@
     }
     .footer{
         width: 100%;
-        padding: 0%;
         height: 25vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .footer .itema img{
         width: 100px;
+        padding: 0;
     }
     .footer .itema{
         width: 100%;
@@ -241,18 +239,21 @@
     .footer .itema h4{
         font-size: 14px;
         letter-spacing: -1px;
-        padding-bottom: 1%;
-    }
-    .footer .item p{
-        font-size: 10px;
+        /* padding-bottom: 1%; */
     }
     .footer .contact-m{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .footer .contact-m a{
-        margin: 2% 0;
+        margin: 1% 0;
         font-size: 12px;
+    }
+    .footer .item p{
+        font-size: 10px;
+        margin: 0;
     }
     .footer .itemb,
     .footer .itemc,
