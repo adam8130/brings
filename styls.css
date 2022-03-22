@@ -29,20 +29,20 @@
     transform: scale(1.2);
 }
 .header h4{
-    color: white;
+    color: rgba(225,225,225);
     font-weight: 500;
     font-size: 16px;
     margin-top: 10px;
     font-family: 'Noto Serif JP', serif;
 }
 .header button{
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 15px;
     width: 80px;
-    color: rgb(255,193,57);
+    color: rgba(225,225,225,0.9);
     background-color: rgb(50,50,50);
     border-radius: 25px;
-    border: 1px solid rgb(255,193,57);
+    border: 1px solid rgba(255,190,60,0.6);
     padding-bottom: 2px;
     font-family: 'Noto Serif JP', serif;
 }
@@ -56,6 +56,7 @@
     font-weight: 500;
     padding: 0 5px;
     display: inline-block;
+    font-family: 'Noto Serif JP', serif;
 }
 .header nav a:hover{
     transform: translateY(-20%) scale(1.2);
@@ -107,12 +108,12 @@
 
 .footer{
     width: 100%;
-    height: 20vh;
+    height: 25vh;
     display: flex;
     background-color: rgba(50,50,50);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Noto Serif JP', serif;
     align-items: center;
-    padding: 5% 5% 5% 8%
+    padding: 5% 5% 5% 7%
 }
 .itema{
     flex: 2;
@@ -120,7 +121,13 @@
     flex-direction: column;
 }
 .itema img{
-    width: 130px;
+    width: 100px;
+    padding-top: 5%;
+}
+.itema p{
+    font-size: 14px;
+    color: rgba(225,225,225,0.9);
+    margin-top: 2%;
 }
 .itemb,
 .itemc,
@@ -134,19 +141,22 @@
     margin: 1.5% 0;
     display: flex;
 }
-.item a:hover{
-    transform: translateY(-10%) scale(1.1);
-    color: rgb(255,195,60);
-}
-.footer .item i{
-    color: rgba(255,190,60,0.6);
-    margin-right: 3%;
-}
 .item a{
     color: rgba(225,225,225,0.9);
     font-size: 14px;
     text-decoration: none;
     line-height: 1.1;
+}
+.item a:hover{
+    transform: 
+    translateY(-10%) 
+    translateX(5%)
+    scale(1.1);
+    color: rgb(255,195,60);
+}
+.footer .item i{
+    color: rgba(255,190,60,0.6);
+    margin-right: 3%;
 }
 .item h2{
     font-size: 18px;
@@ -154,13 +164,12 @@
     padding: 10px 0 5px 0;
     color: rgba(225,225,225,0.9);
 }
-.itema p{
-    font-size: 14px;
-    color: rgba(225,225,225,0.9);
-}
 .itema h4{
     font-size: 14px;
     color: rgba(255,190,60,0.7);
+}
+.footer .contact-m{
+    display: none;
 }
 .nav-m{
     display: none;
@@ -187,18 +196,24 @@
     }
     .header button{
         margin-top: 15%;
+        border: 1px solid rgba(255,190,60,0.6);
+        color: rgba(225,225,225,0.9);
+        
+        font-size: 14px;
     }
     .tittle{
         width: 80%;
-        margin: 15% auto 10%;
+        margin: 15% auto 5%;
     }
     .tittle p{
         font-size: 24px;
+        letter-spacing: 8px;
     }
     .container{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 auto;
     }
     .container .item{
         width: 70%;
@@ -206,7 +221,7 @@
     .footer{
         width: 100%;
         padding: 0%;
-        height: 20vh;
+        height: 25vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -219,6 +234,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         flex: initial;
         font-family: 'Noto Serif JP', serif;
     }
@@ -226,6 +242,17 @@
         font-size: 14px;
         letter-spacing: -1px;
         padding-bottom: 1%;
+    }
+    .footer .item p{
+        font-size: 10px;
+    }
+    .footer .contact-m{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer .contact-m a{
+        margin: 2% 0;
+        font-size: 12px;
     }
     .footer .itemb,
     .footer .itemc,
@@ -246,7 +273,7 @@
         color: bisque;
     }
     .nav-m{
-        width: 50%;
+        width: 60%;
         height: 80vh;
         border-radius: 0 20px 20px 0;
         background-color:
@@ -273,6 +300,7 @@
         height: 6px;
         border-radius: 50%;
         background-color: bisque;
+        margin-left: 2%;
     }
     .nav-m .serch{
         position: relative;
@@ -281,10 +309,10 @@
         width: 75%;
         height: 25px;
         margin: 5% 0 10% 0;
-        border-radius: 0 50px 50px 0;
+        border-radius: 
+        0 50px 50px 0;
         border-radius: 50px;
         padding-left: 5%;
-        /* margin-left: 10%; */
         background-color: rgb
         (225,225,225);
     }

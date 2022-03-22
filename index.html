@@ -63,19 +63,19 @@
             <a href="#">
                 <img src="img/Gucci-Logo-1-480x480.png" alt="">
             </a>    
-            <h4>自由 就是以自己的方式變得性感</h4>
+            <h4>自由就是以自己的方式變得性感</h4>
         </div>
         <div class="item">
             <a href="#">
                 <img src="img/Brings-Logo-480x480.png" alt="">
             </a>    
-            <h4>每一季由我們工作室帶回的各品牌現貨</h4>
+            <h4>每一個季度帶回的品牌經典</h4>
         </div>
         <div class="item">
             <a href="#">
                 <img src="img/Boutique-Logo-480x480.png" alt="">
             </a>    
-            <h4>給我們您想要尋找的精品圖案或照片</h4>
+            <h4>讓我們幫您尋找摯愛</h4>
         </div>
 
     </div>
@@ -85,10 +85,22 @@
     <div class="footer">
 
         <div class="item itema">
+
             <img src="img/Brings-cutout.png" alt="">
+            
             <h4>唯心所動 , 唯心所購</h4>  
-            <p>Copyright &copy; 2022 Brings.
+
+            <div class="contact-m">
+                <a href="#">0800-000-000</a>
+                <a href="#"class="adress">
+                    台北市信義區永吉路<br>120巷15號
+                </a>
+            </div>
+
+            <p>
+                Copyright &copy; 2022 Brings.
             </p>
+
         </div>
 
         <div class="item itemb">
@@ -138,16 +150,16 @@
     </div>
 
     <!-- mobile -->
-    <div class="mbtn">
+    <div class="mbtn" id="mbtn">
         <i class="fa-solid fa-bars"></i>
     </div>
 
-    <div class="nav-m">
+    <div class="nav-m" id="nav-m">
         
         <img src="img/Brings-cutout.png" alt="">
         
         <div>
-            <!-- <div class="dot"></div> -->
+           
             <div class="serch">
                 <input type="text" placeholder="Serch">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -188,15 +200,48 @@
 <script type="text/javascript">
     $(document).ready(function(){
         
-        $(".mbtn").on("click",function(){
-            
-                $(".nav-m").toggleClass('x')
-            
-        })
-        
-    })
+        //$(".mbtn").on("click",function(){
+        //    
+        //    $(".nav-m").toggleClass('x')
+        //
+        //});
+
+        $("body").click(function(){
+            $(".nav-m").removeClass('x');
+        });
+ 
+        $(".nav-m").click(function(e){
+            e.stopPropagation();
+        });
+
+
+        $(".mbtn").click(function(e){
+            e.stopPropagation();
+            $(".nav-m").toggleClass('x')
+            ;
+        });
+
+   })
 </script>
-<!-- $(".nav-m").animate ({left:100}) -->
+
+<!-- <script type="text/javascript">
+
+    document.addEventListener("click",clickHidden);
+
+    var menu = document.getElementById('nav-m')
+    var mbtn = document.getElementById('mbtn')
+
+    function clickHidden(eve)
+    {   
+        if( eve.target.id="mbtn" )
+        menu.style.display="block";
+
+        else if( eve.target.id!="mbtn" )//點選的如果不是選單，選單隱藏。如果是選單，選單顯現
+    	menu.style.display="none";
+    }
+
+</script> -->
+
 
 
 </body>
