@@ -28,11 +28,12 @@
 .header img:hover{
     transform: scale(1.2);
 }
-.header h2{
+.header h4{
     color: white;
-    font-weight: 300;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 16px;
     margin-top: 10px;
+    font-family: 'Noto Serif JP', serif;
 }
 .header button{
     font-size: 16px;
@@ -43,6 +44,7 @@
     border-radius: 25px;
     border: 1px solid rgb(255,193,57);
     padding-bottom: 2px;
+    font-family: 'Noto Serif JP', serif;
 }
 .header button:hover{
     transform: scale(1.2);
