@@ -7,16 +7,15 @@
     <title>Brings</title>
     <link rel="stylesheet" href="styls.css">
     <script src="https://kit.fontawesome.com/f3b1e1eda4.js" crossorigin="anonymous"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700&display=swap');
+    </style>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
-</head>
 <body>
     <!-- header -->
 
     <div class="header">
-        <div>
+        <div class="logo">
             <a href="#">
                 <img src="img/Brings-cutout.png" alt="">
             </a>   
@@ -84,66 +83,66 @@
 
     <div class="footer">
 
-        <div class="item itema">
-
-            <img src="img/Brings-cutout.png" alt="">
-            
+        <div class="item item-a">
+            <a href="">
+                <img src="img/Brings-cutout.png" alt="">
+            </a>
             <h4>唯心所動 , 唯心所購</h4>  
-
-            <div class="contact-m">
-                <a href="#">0800-000-000</a>
-                <a href="#">台北市信義區永吉路<br>120巷15號
-                </a>
-            </div>
-
             <p>Copyright &copy; 2022 Brings.</p>
-
         </div>
 
-        <div class="item itemb">
+        <div class="item item-b">
             <h2>Support</h2>
-            <div>
-                <i class="fa-solid fa-circle-user"></i>
-                <a href="#">我的帳號</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-cart-shopping" style="font-size: 14px;"></i> 
-                <a href="#">購物車</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-circle-exclamation"></i>
-                <a href="#">回報錯誤</a>
-            </div>
+                <div>
+                    <i class="fa-solid fa-circle-user"></i>
+                    <a href="#">我的帳號</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cart-shopping" style="font-size: 14px;"></i> 
+                    <a href="#">購物車</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <a href="#">回報錯誤</a>
+                </div>
         </div>
 
-        <div class="item itemc">
+        <div class="item item-c">
             <h2>About</h2>
-            <div>
-                <i class="fa-brands fa-facebook-square"></i>
-                <a href="#">Facebook</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-instagram-square"></i>
-                <a href="#">Instgram</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-line"></i>
-                <a href="#">Line</a>
-            </div>
+                <div>
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <a href="#">Facebook</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-instagram-square"></i>
+                    <a href="#">Instgram</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-line"></i>
+                    <a href="#">Line</a>
+                </div>
         </div>
 
-        <div class="item itemd">   
+        <div class="item item-d">  
             <h2>Contact</h2>  
-            <div>
-                <i class="fa-solid fa-square-phone"></i>
-                <a href="#">0800-000-000</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-location-dot"></i>
-                <a href="#"class="adress">台北市信義區永吉路<br>120巷15號</a>
-            </div>
+                <div>
+                    <i class="fa-solid fa-square-phone"></i>
+                    <a href="#">0800-000-000</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="#"class="adress">台北市信義區永吉路<br>120巷15號</a>
+                </div>
         </div>
 
+        <div class="item item-m">
+            <img src="img/Brings-cutout.png"alt="">
+            <h4>唯心所動 , 唯心所購</h4>  
+            <a href="#">0800-000-000</a>
+            <a href="#">台北市信義區永吉路<br>120巷15號</a>
+            <p>Copyright &copy; 2022 Brings.</p>
+        </div>
+    
     </div>
 
     <!-- mobile -->
@@ -196,12 +195,10 @@
 <script type="text/javascript">
     $(document).ready(function(){
         
-        //$(".mbtn").on("click",function(){
-        //    
-        //    $(".nav-m").toggleClass('x')
-        //
-        //});
-
+        $(window).scroll(function(){
+            $(".nav-m").removeClass('x')
+        })
+       
         $("body").click(function(){
             $(".nav-m").removeClass('x');
         });
