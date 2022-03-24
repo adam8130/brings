@@ -242,6 +242,7 @@
     .tittle p{
         font-size: 20px;
         letter-spacing: 4px;
+        font-family: 'Noto Serif TC', serif;
     }
     .container{
         display: flex;
@@ -480,7 +481,8 @@
     }
     .about .tittle h4{
         font-size: 20px;
-        letter-spacing: 4px;    
+        letter-spacing: 4px; 
+        font-family: 'Noto Serif TC', serif;   
     }
     .about .tittle p{
         font-family: 'Noto Serif JP', serif;
