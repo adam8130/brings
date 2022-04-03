@@ -13,6 +13,41 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700&family=Noto+Serif+TC:wght@200;300;400;500;600&display=swap"
         rel="stylesheet">
+</head>
+<style>
+    .slider {
+        width: 100%;
+        height: 90%;
+        margin: 100px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    /* .slider:hover {
+        transform: scale(1.1);
+    } */
+
+    .nodes {
+        display: flex;
+        position: absolute;
+        bottom: 5%;
+    }
+
+    .slider .node {
+        width: 12px;
+        height: 12px;
+        margin: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    .node:hover {
+        transform: scale(1.5);
+    }
+</style>
 
 <body>
 
@@ -44,6 +79,22 @@
     <div class="tittle">
         <p>Brings The Best For You</p>
     </div>
+
+
+    <!-- slider -->
+
+    <div class="slider" id="slider">
+        <!-- <img id="img" src="" alt=""> -->
+        <div class="nodes">
+            <div class="node" id="node1"></div>
+            <div class="node" id="node2"></div>
+            <div class="node" id="node3"></div>
+            <div class="node" id="node4"></div>
+            <div class="node" id="node5"></div>
+        </div>
+    </div>
+
+
 
     <!-- container -->
 
@@ -112,7 +163,7 @@
             </div>
             <div>
                 <i class="fa-solid fa-circle-exclamation"></i>
-                <a href="#">回報錯誤</a>
+                <a href="#">回報問題</a>
             </div>
         </div>
 
@@ -137,6 +188,10 @@
             <div>
                 <i class="fa-solid fa-square-phone"></i>
                 <a href="#">0800-000-000</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope" id="email"></i>
+                <a href="#">Brings2022@gmail.com</a>
             </div>
             <div>
                 <i class="fa-solid fa-location-dot"></i>
@@ -203,6 +258,8 @@
 
     </div>
 
+
+
     <script src="jquery-3.6.0.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -227,6 +284,40 @@
             });
 
         })
+
+        let imgs = [
+            "img/slide-1.jpg",
+            "img/slide-3.jpg",
+            "img/slide-9.jpg",
+            "img/slide-7.jpg",
+            "img/about-2.png"
+        ]
+        let img = document.getElementById("img")
+        let slider = document.getElementById("slider")
+        slider.style.backgroundImage="url"+"("+imgs[0]+")"
+        slider.style.backgroundPosition="center center"
+        slider.style.backgroundSize="cover"
+        let node1 = document.getElementById("node1")
+        let node2 = document.getElementById("node2")
+        let node3 = document.getElementById("node3")
+        let node4 = document.getElementById("node4")
+        let node5 = document.getElementById("node5")
+        node1.onclick = function () {
+            slider.style.backgroundImage="url"+"("+imgs[0]+")"
+        }
+        node2.onclick = function () {
+            slider.style.backgroundImage="url"+"("+imgs[1]+")"
+        }
+        node3.onclick = function () {
+            slider.style.backgroundImage="url"+"("+imgs[2]+")"
+        }
+        node4.onclick = function () {
+            slider.style.backgroundImage="url"+"("+imgs[3]+")"
+        }
+        node5.onclick = function () {
+            slider.style.backgroundImage="url"+"("+imgs[4]+")"
+        }
+
     </script>
 
 </body>
