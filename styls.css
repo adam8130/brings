@@ -14,6 +14,7 @@
 body{
     width: 100vw;
     height: 100vh;
+    /* background-color: rgb(245,245,245); */
 }
 .header{
     width: 100%;
@@ -132,7 +133,8 @@ body{
 }
 .item{
     width: 30%;
-    margin: 20px 10px;
+    padding: 20px 0;
+    margin: 3% 0;
     transition:
     all 0.5s,
     color 0s;
@@ -177,8 +179,9 @@ body{
     left: 10%;
 }
 .post1 .img::after{
-    width: 250px;
+    width: 280px;
     content: "讓我們為你帶來最不一樣的2022";
+    letter-spacing: 2px;
     font-size: 50px;
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
@@ -197,8 +200,9 @@ body{
     position: relative;
 }
 .post2::after{
-    width: 250px;
+    width: 280px;
     content: "唯心所購 隨心所動";
+    letter-spacing: 3px;
     font-size: 60px;
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
@@ -334,6 +338,11 @@ body{
 
 @media screen and (max-width:500px){
 
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(245,245,245);
+    }
     .header{
         display: flex;
         justify-content: center;
@@ -355,13 +364,16 @@ body{
         display: none;
     }
     .tittle{
-        width: 90%;
-        margin: 20% auto;
+        width: 95%;
+        padding: 10% 2%;
+        margin: 8% auto;
+        background-color: white;
     }
     .tittle p{
         font-size: 20px;
         letter-spacing: 4px;
         font-family: 'Noto Serif TC', serif;
+        text-align: center;
     }
     .slider{
         margin: 0;
@@ -382,42 +394,46 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 20% auto;
+        margin: 25% auto 12%;
+        padding-bottom: 0;
     }
     .container .item{
-        width: 70%;
+        width: 95%;
+        background-color: white;
+        padding: 20px 0;
     }
     .container .item h4{
         font-weight: 300;
     }
     .banner{
         width: 100%;
-        height: 150%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-content: center;
+        justify-content: center;
     }
     .post1{
         width: 100%;
-        height: 80%;
+        height: 40%;
         background-image: 
         linear-gradient(rgba(50,50,50,0.3),rgba(50,50,50,0.3)),
         url(img/banner-3.jpg);
         background-position: center center;
         background-size: cover;
-        margin-bottom: 20%;
         position: relative;
     }
     .banner .post1 .img{
-        width: 40%;
+        width: 35%;
         position: absolute;
-        top: 40%;
-        left: 8%;
+        top: 30%;
+        left: 5%;
     }
     .post1 .img::after{
         width: 150px;
         content: "讓我們為你帶來最不一樣的2022";
-        font-size: 28px;
+        letter-spacing: 0;
+        font-size: 22px;
         font-family: 'Rubik', sans-serif;
         font-weight: 800;
         color: rgba(253, 252, 250,0.8);
@@ -425,37 +441,39 @@ body{
     }
     .post2{
         width: 100%;
-        height: 80%;
+        height: 40%;
         background-image: 
         linear-gradient(rgba(50,50,50,0.3),rgba(50,50,50,0.3)),
         url(img/banner-4.jpg);
         background-position: center center;
         background-size: cover;
-        margin-top: 20%;
         position: relative;
     }
     .post2::after{
         width: 150px;
         content: "唯心所購 隨心所動";
-        font-size: 36px;
+        letter-spacing: 0;
+        font-size: 30px;
         font-family: 'Rubik', sans-serif;
         font-weight: 800;
         color: rgba(253, 252, 250,0.8);
         display: block;
         position: absolute;
-        top: 45%;
-        left: 30%;
+        top: 50%;
+        left: 33%;
     }
     .ending{
-        width: 90%;
-        margin: 20% auto;
+        width: 95%;
+        padding: 5% 2%;
+        margin: 0 auto 10%;
         text-align: center;
-        
     }
     .ending p{
         font-size: 20px;
         letter-spacing: 4px;
-        font-family: 'Noto Serif TC', serif;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        color: rgb(22, 21, 21);
     }
     .footer{
         width: 100%;
@@ -512,24 +530,30 @@ body{
         text-shadow: 1px 1px 5px rgb(50,50,50);
     }
     .nav-m{
-        width: 55%;
+        width: 90%;
+        height: 80%;
         border-radius: 0 20px 20px 0;
         background-color:
         rgb(50,50,50,0.95);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 10% 5%;
+        padding: 10% 5% 10% 7%;
         position: fixed;
         top: 10%;
-        bottom: 10%;
         left: -100%;
-        transition: all 1s;
+        transition: all 1.2s;
         z-index: 5;
     }
+    .nav-m p{
+        color: rgba(225,225,225,0.9);
+        font-size: 14px;
+        font-variant: small-caps;
+        /* margin-top: -1%; */
+    }
     .nav-m img{
-        width: 100px;
-        padding: 0 0 5px 0;
+        width: 120px;
+        padding: 0 0 0 0;
     }
     .nav-m div{
         display: flex;
@@ -603,10 +627,102 @@ body{
     .header nav{
         display: none;
     }
+    .tittle{
+        width: 95%;
+        padding: 5% 2%;
+        margin: 0 auto;
+    }
+    .tittle p{
+        font-size: 20px;
+        letter-spacing: 4px;
+        font-family: 'Noto Serif TC', serif;
+        text-align: center;
+    }
     .slider{
         width: 100%;
         height: 80%;
+        margin: 0;
     }
+
+    /* banner */
+
+    .banner{
+        width: 100%;
+        height: 200%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    .post1{
+        width: 100%;
+        height: 100%;
+        background-image: 
+        linear-gradient(rgba(50,50,50,0.3),rgba(50,50,50,0.3)),
+        url(img/banner-3.jpg);
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+    }
+    .banner .post1 .img{
+        width: 20%;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+    }
+    .post1 .img::after{
+        width: 200px;
+        content: "讓我們為你帶來最不一樣的2022";
+        letter-spacing: 0;
+        font-size: 30px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 800;
+        color: rgba(253, 252, 250,0.8);
+        display: block;
+    }
+    .post2{
+        width: 100%;
+        height: 100%;
+        background-image: 
+        linear-gradient(rgba(50,50,50,0.3),rgba(50,50,50,0.3)),
+        url(img/banner-4.jpg);
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+    }
+    .post2::after{
+        width: 200px;
+        content: "唯心所購 隨心所動";
+        letter-spacing: 0;
+        font-size: 40px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 800;
+        color: rgba(253, 252, 250,0.8);
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+    }
+    .banner img{
+        width: 100%;
+        height: 100%;
+    }
+    .ending{
+        width: 95%;
+        padding: 5% 2%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .ending p{
+        font-size: 20px;
+        letter-spacing: 4px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        color: rgb(22, 21, 21);
+    }
+
+    /* footer */
+
     .footer{
         width: 100%;
         height: 50%;
@@ -675,6 +791,9 @@ body{
         bottom: -100%;
         transition: all 1s;
         z-index: 5;
+    }
+    .nav-m p{
+        display: none;
     }
     .nav-m img{
         display: none;
