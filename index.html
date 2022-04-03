@@ -14,40 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700&family=Noto+Serif+TC:wght@200;300;400;500;600&display=swap"
         rel="stylesheet">
 </head>
-<style>
-    .slider {
-        width: 100%;
-        height: 90%;
-        margin: 100px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-    }
-    /* .slider:hover {
-        transform: scale(1.1);
-    } */
 
-    .nodes {
-        display: flex;
-        position: absolute;
-        bottom: 5%;
-    }
-
-    .slider .node {
-        width: 12px;
-        height: 12px;
-        margin: 10px 20px;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 50%;
-        cursor: pointer;
-        transition: all 0.5s;
-    }
-
-    .node:hover {
-        transform: scale(1.5);
-    }
-</style>
 
 <body>
 
@@ -91,6 +58,7 @@
             <div class="node" id="node3"></div>
             <div class="node" id="node4"></div>
             <div class="node" id="node5"></div>
+            <div class="node" id="node6"></div>
         </div>
     </div>
 
@@ -289,33 +257,66 @@
             "img/slide-1.jpg",
             "img/slide-3.jpg",
             "img/slide-9.jpg",
-            "img/slide-7.jpg",
-            "img/about-2.png"
+            "img/slide-11.png",
+            "img/slide-10.jpg",
+            "img/slide-12.jpg"
         ]
         let img = document.getElementById("img")
         let slider = document.getElementById("slider")
-        slider.style.backgroundImage="url"+"("+imgs[0]+")"
-        slider.style.backgroundPosition="center center"
-        slider.style.backgroundSize="cover"
         let node1 = document.getElementById("node1")
         let node2 = document.getElementById("node2")
         let node3 = document.getElementById("node3")
         let node4 = document.getElementById("node4")
         let node5 = document.getElementById("node5")
-        node1.onclick = function () {
+        let index = 0
+
+        slider.style.backgroundImage="url"+"("+imgs[0]+")"
+        slider.style.backgroundPosition="center center"
+        slider.style.backgroundSize="cover"
+
+        slider.onclick = function(e){
+            let x = e.clientX
+            console.log(x);
+            if(x>500){
+                if(index>=5){
+                    index = -1
+                }
+                index++
+                console.log(index);
+                slider.style.backgroundImage="url"+"("+imgs[index]+")"
+            }else if(x<400){
+                if(index<=0){
+                    index = 6
+                }
+                index--
+                console.log(index);
+                slider.style.backgroundImage="url"+"("+imgs[index]+")"
+            }
+        }
+
+        node1.onclick = function (e) {
+            e.stopPropagation()
             slider.style.backgroundImage="url"+"("+imgs[0]+")"
         }
-        node2.onclick = function () {
+        node2.onclick = function (e) {
+            e.stopPropagation()
             slider.style.backgroundImage="url"+"("+imgs[1]+")"
         }
-        node3.onclick = function () {
+        node3.onclick = function (e) {
+            e.stopPropagation()
             slider.style.backgroundImage="url"+"("+imgs[2]+")"
         }
-        node4.onclick = function () {
+        node4.onclick = function (e) {
+            e.stopPropagation()
             slider.style.backgroundImage="url"+"("+imgs[3]+")"
         }
-        node5.onclick = function () {
+        node5.onclick = function (e) {
+            e.stopPropagation()
             slider.style.backgroundImage="url"+"("+imgs[4]+")"
+        }
+        node6.onclick = function (e) {
+            e.stopPropagation()
+            slider.style.backgroundImage="url"+"("+imgs[5]+")"
         }
 
     </script>
