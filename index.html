@@ -277,14 +277,14 @@
         slider.onclick = function(e){
             let x = e.clientX
             console.log(x);
-            if(x>500){
+            if(x>300){
                 if(index>=5){
                     index = -1
                 }
                 index++
                 console.log(index);
                 slider.style.backgroundImage="url"+"("+imgs[index]+")"
-            }else if(x<400){
+            }else if(x<200){
                 if(index<=0){
                     index = 6
                 }
