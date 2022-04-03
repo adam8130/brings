@@ -10,11 +10,12 @@
     <script src="https://kit.fontawesome.com/f3b1e1eda4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700&family=Noto+Serif+TC:wght@200;300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700&family=Noto+Serif+TC:wght@200;300;400;500;600&family=Rubik:wght@400;500;700;800&display=swap"
         rel="stylesheet">
 </head>
-
 
 <body>
 
@@ -105,6 +106,25 @@
             <h4>讓我們幫您尋找摯愛</h4>
         </div>
 
+    </div>
+
+    <!-- banner -->
+
+    <div class="banner">
+        <div class="post1">
+            <div class="img">
+                <img src="img/Brings-cutout.png" alt="">
+            </div>
+        </div>
+        <div class="post2">
+            <!-- <img src="img/slide-9.jpg" alt=""> -->
+        </div>
+    </div>
+
+    <!-- ending -->
+
+    <div class="ending">
+        <p>Choose Who You Want<br>Be Who You Are</p>
     </div>
 
     <!-- footer -->
@@ -270,54 +290,62 @@
         let node5 = document.getElementById("node5")
         let index = 0
 
-        slider.style.backgroundImage="url"+"("+imgs[0]+")"
-        slider.style.backgroundPosition="center center"
-        slider.style.backgroundSize="cover"
+        slider.style.backgroundImage = "url" + "(" + imgs[0] + ")"
+        slider.style.backgroundPosition = "center center"
+        slider.style.backgroundSize = "cover"
 
-        slider.onclick = function(e){
+        node1.onclick = function (e) {
+            e.stopPropagation()
+            slider.style.backgroundImage = "url" + "(" + imgs[0] + ")"
+            index = 0
+        }
+        node2.onclick = function (e) {
+            e.stopPropagation()
+            slider.style.backgroundImage = "url" + "(" + imgs[1] + ")"
+            index = 1
+        }
+        node3.onclick = function (e) {
+            e.stopPropagation()
+            slider.style.backgroundImage = "url" + "(" + imgs[2] + ")"
+            index = 2
+        }
+        node4.onclick = function (e) {
+            e.stopPropagation()
+            slider.style.backgroundImage = "url" + "(" + imgs[3] + ")"
+            index = 3
+        }
+        node5.onclick = function (e) {
+            e.stopPropagation()
+            slider.style.backgroundImage = "url" + "(" + imgs[4] + ")"
+            index = 4
+        }
+        node6.onclick = function (e) {
+            e.stopPropagation()
+            slider.style.backgroundImage = "url" + "(" + imgs[5] + ")"
+            index = 5
+        }
+
+
+        slider.onclick = function (e) {
             let x = e.clientX
             console.log(x);
-            if(x>300){
-                if(index>=5){
+            if (x > 300) {
+                if (index >= 5) {
                     index = -1
                 }
                 index++
                 console.log(index);
-                slider.style.backgroundImage="url"+"("+imgs[index]+")"
-            }else if(x<200){
-                if(index<=0){
+                slider.style.backgroundImage = "url" + "(" + imgs[index] + ")"
+            } else if (x < 200) {
+                if (index <= 0) {
                     index = 6
                 }
                 index--
                 console.log(index);
-                slider.style.backgroundImage="url"+"("+imgs[index]+")"
+                slider.style.backgroundImage = "url" + "(" + imgs[index] + ")"
             }
         }
 
-        node1.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage="url"+"("+imgs[0]+")"
-        }
-        node2.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage="url"+"("+imgs[1]+")"
-        }
-        node3.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage="url"+"("+imgs[2]+")"
-        }
-        node4.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage="url"+"("+imgs[3]+")"
-        }
-        node5.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage="url"+"("+imgs[4]+")"
-        }
-        node6.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage="url"+"("+imgs[5]+")"
-        }
 
     </script>
 
