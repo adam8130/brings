@@ -95,7 +95,7 @@ body{
 
 .slider {
     width: 100%;
-    height: 90%;
+    height: 100%;
     margin: 100px 0;
     display: flex;
     flex-direction: column;
@@ -382,7 +382,7 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 auto;
+        margin: 20% auto;
     }
     .container .item{
         width: 70%;
@@ -392,13 +392,21 @@ body{
     }
     .banner{
         width: 100%;
-        height: 100%;
+        height: 150%;
         display: flex;
         flex-direction: column;
         align-content: center;
     }
     .post1{
-        height: 50%;
+        width: 100%;
+        height: 80%;
+        background-image: 
+        linear-gradient(rgba(50,50,50,0.3),rgba(50,50,50,0.3)),
+        url(img/banner-3.jpg);
+        background-position: center center;
+        background-size: cover;
+        margin-bottom: 20%;
+        position: relative;
     }
     .banner .post1 .img{
         width: 40%;
@@ -417,13 +425,13 @@ body{
     }
     .post2{
         width: 100%;
-        height: 50%;
+        height: 80%;
         background-image: 
         linear-gradient(rgba(50,50,50,0.3),rgba(50,50,50,0.3)),
         url(img/banner-4.jpg);
         background-position: center center;
         background-size: cover;
-        margin-top: 30px;
+        margin-top: 20%;
         position: relative;
     }
     .post2::after{
