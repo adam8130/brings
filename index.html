@@ -52,7 +52,6 @@
     <!-- slider -->
 
     <div class="slider" id="slider">
-        <!-- <img id="img" src="" alt=""> -->
         <div class="nodes">
             <div class="node" id="node1"></div>
             <div class="node" id="node2"></div>
@@ -249,6 +248,7 @@
 
     <script src="jquery-3.6.0.js"></script>
     <script type="text/javascript">
+
         $(document).ready(function () {
 
             $(window).scroll(function () {
@@ -272,6 +272,7 @@
 
         })
 
+
         let imgs = [
             "img/slide-1.jpg",
             "img/slide-3.jpg",
@@ -280,54 +281,81 @@
             "img/slide-10.jpg",
             "img/slide-12.jpg"
         ]
-        let img = document.getElementById("img")
+
         let slider = document.getElementById("slider")
         let node1 = document.getElementById("node1")
         let node2 = document.getElementById("node2")
         let node3 = document.getElementById("node3")
         let node4 = document.getElementById("node4")
         let node5 = document.getElementById("node5")
+        let node6 = document.getElementById("node6")
+
+        let nodes = [
+            node1,
+            node2,
+            node3,
+            node4,
+            node5,
+            node6
+        ]
         let index = 0
+        let timer = setInterval(count, 3000)
+        let timer2;
 
         slider.style.backgroundImage = "url" + "(" + imgs[0] + ")"
         slider.style.backgroundPosition = "center center"
         slider.style.backgroundSize = "cover"
+        node1.style.transform = "scale(1.5)"
 
-        node1.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage = "url" + "(" + imgs[0] + ")"
-            index = 0
+
+        function count() {
+
+            if (index >= 5) {
+                index = -1
+            }
+            index++
+            slider.style.backgroundImage = "url" + "(" + imgs[index] + ")"
+            slider.style.backgroundPosition = "center center"
+            slider.style.backgroundSize = "cover"
+            console.log(index);
+
+            switch (index) {
+                case 0: node1.style.transform = "scale(1.5)"
+                    node6.style.transform = "none"
+                    break
+                case 1: node2.style.transform = "scale(1.5)"
+                    node1.style.transform = "none"
+                    break
+                case 2: node3.style.transform = "scale(1.5)"
+                    node2.style.transform = "none"
+                    break
+                case 3: node4.style.transform = "scale(1.5)"
+                    node3.style.transform = "none"
+                    break
+                case 4: node5.style.transform = "scale(1.5)"
+                    node4.style.transform = "none"
+                    break
+                case 5: node6.style.transform = "scale(1.5)"
+                    node5.style.transform = "none"
+                    break
+            }
+            return index
         }
-        node2.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage = "url" + "(" + imgs[1] + ")"
-            index = 1
-        }
-        node3.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage = "url" + "(" + imgs[2] + ")"
-            index = 2
-        }
-        node4.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage = "url" + "(" + imgs[3] + ")"
-            index = 3
-        }
-        node5.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage = "url" + "(" + imgs[4] + ")"
-            index = 4
-        }
-        node6.onclick = function (e) {
-            e.stopPropagation()
-            slider.style.backgroundImage = "url" + "(" + imgs[5] + ")"
-            index = 5
-        }
+
 
 
         slider.onclick = function (e) {
             let x = e.clientX
+            clearInterval(timer)
+            clearTimeout(timer2)
+            nodes[0].style.transform = "none"
+            nodes[1].style.transform = "none"
+            nodes[2].style.transform = "none"
+            nodes[3].style.transform = "none"
+            nodes[4].style.transform = "none"
+            nodes[5].style.transform = "none"
             console.log(x);
+
             if (x > 300) {
                 if (index >= 5) {
                     index = -1
@@ -335,6 +363,11 @@
                 index++
                 console.log(index);
                 slider.style.backgroundImage = "url" + "(" + imgs[index] + ")"
+                nodes[index].style.transform = "scale(1.5)"
+
+                timer2 = setTimeout(timer = setInterval(count, 3000),9000)
+                return index
+
             } else if (x < 200) {
                 if (index <= 0) {
                     index = 6
@@ -342,8 +375,31 @@
                 index--
                 console.log(index);
                 slider.style.backgroundImage = "url" + "(" + imgs[index] + ")"
+                nodes[index].style.transform = "scale(1.5)"
+
+                timer2 = setTimeout(timer = setInterval(count, 3000),9000)
+                return index
             }
         }
+
+
+        for (i = 0; i < nodes.length; i++) {
+            let x = i
+            nodes[i].onclick = function (e) {
+                e.stopPropagation()
+                slider.style.backgroundImage = "url" + "(" + imgs[x] + ")"
+                nodes[0].style.transform = "none"
+                nodes[1].style.transform = "none"
+                nodes[2].style.transform = "none"
+                nodes[3].style.transform = "none"
+                nodes[4].style.transform = "none"
+                nodes[5].style.transform = "none"
+                nodes[x].style.transform = "scale(1.5)"
+                index = x
+                return x
+            }
+        }
+
 
 
     </script>
