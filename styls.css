@@ -1,6 +1,4 @@
 
-/* color: rgb(255,195,60); */
-/* rgb(50,50,50); */
 *{
     padding: 0;
     margin: 0;
@@ -14,7 +12,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    /* background-color: rgb(245,245,245); */
+    /* background-color: rgb(240,240,240); */
 }
 .header{
     width: 100%;
@@ -80,9 +78,11 @@ body{
 /* tittle */
 
 .tittle{
-    width: 100%;
-    margin: 8% 0;
+    width: 90%;
+    margin: 5% auto;
+    padding: 3% 2%;
     text-align: center;
+    background-color: white;
 }
 .tittle p{
     font-weight: 500;
@@ -97,7 +97,6 @@ body{
 .slider {
     width: 100%;
     height: 100%;
-    margin: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,13 +122,14 @@ body{
 /* container */
 
 .container{
-    width: 90%;
-    margin: 50px auto;
+    width: 100%;
+    margin: auto ;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
-    padding-bottom: 50px;
+    padding: 100px 5%;
+    background-color: white;
 }
 .item{
     width: 30%;
@@ -159,7 +159,6 @@ body{
     height: 1500px;
     display: flex;
     flex-direction: column;
-    align-content: center;
 }
 .post1{
     width: 100%;
@@ -169,7 +168,7 @@ body{
     url(img/banner-3.jpg);
     background-position: center center;
     background-size: cover;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     position: relative;
 }
 .banner .post1 .img{
@@ -196,7 +195,7 @@ body{
     url(img/banner-2.png);
     background-position: center center;
     background-size: cover;
-    margin-top: 30px;
+    margin-top: 50px;
     position: relative;
 }
 /* .post2::after{
@@ -220,16 +219,18 @@ body{
 /* ending */
 
 .ending{
-    width: 100%;
-    margin: 8% 0;
+    width: 90%;
+    margin: 5% auto;
     text-align: center;
+    padding: 2% 2%;
+    background-color: white;
 }
 .ending p{
-    font-weight: 500;
-    font-size: 32px;
-    letter-spacing: 10px;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 6px;
     font-variant-caps: small-caps;
-    color: rgb(255,195,60);
+    color: rgb(29, 29, 28);
 }
 
 /* footer */
@@ -391,11 +392,13 @@ body{
         transition: all 0.5s;
     }
     .container{
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 25% auto 12%;
-        padding-bottom: 0;
+        margin: 15% auto 10%;
+        padding: 0;
+        background-color: initial;
     }
     .container .item{
         width: 95%;
@@ -408,21 +411,23 @@ body{
     }
     .banner{
         width: 100%;
-        height: 100%;
+        height: 80%;
         display: flex;
         flex-direction: column;
-        align-content: center;
-        justify-content: center;
+        justify-content: space-around;
+        /* background-color: aqua; */
+        margin-top: 10%;
     }
     .post1{
         width: 100%;
-        height: 40%;
+        height: 45%;
         background-image: 
         linear-gradient(rgba(50,50,50,0.3),rgba(50,50,50,0.3)),
         url(img/banner-3.jpg);
         background-position: center center;
         background-size: cover;
         position: relative;
+        margin: 0;
     }
     .banner .post1 .img{
         width: 35%;
@@ -442,13 +447,14 @@ body{
     }
     .post2{
         width: 100%;
-        height: 40%;
+        height: 45%;
         background-image: 
         linear-gradient(rgba(50,50,50,0.3),rgba(50,50,50,0.3)),
         url(img/banner-4.jpg);
         background-position: center center;
         background-size: cover;
         position: relative;
+        margin: 0;
     }
     .post2::after{
         width: 150px;
@@ -465,10 +471,9 @@ body{
     }
     .ending{
         width: 95%;
-        padding: 5% 2%;
-        margin: 0 auto 10%;
+        margin: 5% auto 8%;
+        padding: 10% 2%;
         text-align: center;
-        background-color: rgb(255,255,255);
     }
     .ending p{
         font-size: 20px;
@@ -619,7 +624,11 @@ body{
 }
 
 @media screen and (max-width:812px) and (min-width:500px){
-
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(240,240,240);
+    }
     .header{
         height: 60%;
     }
@@ -632,7 +641,7 @@ body{
     .tittle{
         width: 95%;
         padding: 5% 2%;
-        margin: 0 auto;
+        margin: 5% auto;
     }
     .tittle p{
         font-size: 20px;
@@ -873,6 +882,7 @@ body{
 .about .tittle{
     width: 90%;
     margin: 5% 0;
+    padding: 0;
 }
 .about .tittle h2{
     font-weight: 200;
@@ -972,19 +982,6 @@ body{
     letter-spacing: 2px;
     padding: 3%;
 }
-.ending{
-    width: 90%;
-    margin: 5% auto;
-    text-align: center;
-}
-.ending p{
-    font-weight: 400;
-    font-size: 30px;
-    letter-spacing: 6px;
-    font-variant-caps: small-caps;
-    color: rgb(29, 29, 28);
-}
-
 @media screen and (max-width:500px){
     
     .about{
@@ -1117,7 +1114,7 @@ body{
     }
     .ending{
         width: 95%;
-        margin: 5% auto;
+        margin: 5% auto 8%;
         padding: 10% 2%;
         text-align: center;
     }
@@ -1147,6 +1144,7 @@ body{
         font-size: 20px;
         letter-spacing: 4px;
         font-variant-caps: small-caps;
+        font-family: 'Noto Serif TC', serif;
         color: rgb(255,195,60);
     }
     .about .tittle p{
