@@ -299,12 +299,12 @@
             node6
         ]
         let index = 0
+
+
         let timer = setInterval(count, 3000)
         let timer2;
 
         slider.style.backgroundImage = "url" + "(" + imgs[0] + ")"
-        slider.style.backgroundPosition = "center center"
-        slider.style.backgroundSize = "cover"
         node1.style.transform = "scale(1.5)"
 
 
@@ -315,8 +315,6 @@
             }
             index++
             slider.style.backgroundImage = "url" + "(" + imgs[index] + ")"
-            slider.style.backgroundPosition = "center center"
-            slider.style.backgroundSize = "cover"
             console.log(index);
 
             switch (index) {
@@ -342,7 +340,13 @@
             return index
         }
 
-
+        slider.onmousemove = function(){
+            clearInterval(timer)
+            console.log(123);
+        }
+        slider.onmouseout = function(){
+            timer = setInterval(count, 3000)
+        }
 
         slider.onclick = function (e) {
             let x = e.clientX
