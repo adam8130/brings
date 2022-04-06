@@ -12,11 +12,10 @@
 body{
     width: 100vw;
     height: 100vh;
-    /* background-color: rgb(240,240,240); */
 }
 .header{
     width: 100%;
-    height: 60%;
+    height: 350px;
     display: flex;
     justify-content: space-between;
     background-image: 
@@ -72,6 +71,7 @@ body{
     padding: 0 8px;
 }
 .header nav a:hover{
+    -webkit-transform: translateY(-15%) scale(1.2);
     transform: translateY(-15%) scale(1.2);
 }
 
@@ -79,7 +79,7 @@ body{
 
 .tittle{
     width: 90%;
-    margin: 5% auto;
+    margin: 3% auto;
     padding: 3% 2%;
     text-align: center;
     background-color: white;
@@ -89,6 +89,7 @@ body{
     font-size: 32px;
     letter-spacing: 10px;
     font-variant-caps: small-caps;
+    font-family: 'Noto Serif TC', serif;
     color: rgb(255,195,60);
 }
 
@@ -96,7 +97,7 @@ body{
 
 .slider {
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,7 +221,7 @@ body{
 
 .ending{
     width: 90%;
-    margin: 5% auto;
+    margin: 3% auto;
     text-align: center;
     padding: 2% 2%;
     background-color: white;
@@ -230,6 +231,7 @@ body{
     font-size: 30px;
     letter-spacing: 6px;
     font-variant-caps: small-caps;
+    font-family: 'Noto Serif TC', serif;
     color: rgb(29, 29, 28);
 }
 
