@@ -301,7 +301,7 @@
         let index = 0
 
 
-        let timer = setInterval(count, 3000)
+        let timer = setInterval(count, 4000)
         let timer2;
 
         slider.style.backgroundImage = "url" + "(" + imgs[0] + ")"
@@ -340,18 +340,22 @@
             return index
         }
 
-        slider.onmousemove = function(){
+        slider.onmousemove = function(e){
+            e.stopPropagation()
             clearInterval(timer)
-            console.log(123);
+            console.log("close");
         }
-        slider.onmouseout = function(){
-            timer = setInterval(count, 3000)
+        slider.onmouseout = function(e){
+            e.stopPropagation()
+            timer = setInterval(count, 4000)
+            console.log("open");
         }
 
         slider.onclick = function (e) {
             let x = e.clientX
             clearInterval(timer)
-            clearTimeout(timer2)
+            e.stopPropagation()
+            e.preventDefault()
             nodes[0].style.transform = "none"
             nodes[1].style.transform = "none"
             nodes[2].style.transform = "none"
@@ -360,7 +364,7 @@
             nodes[5].style.transform = "none"
             console.log(x);
 
-            if (x > 300) {
+            if (x > 500) {
                 if (index >= 5) {
                     index = -1
                 }
@@ -368,11 +372,10 @@
                 console.log(index);
                 slider.style.backgroundImage = "url" + "(" + imgs[index] + ")"
                 nodes[index].style.transform = "scale(1.5)"
-
-                timer2 = setTimeout(timer = setInterval(count, 3000),9000)
+                
                 return index
 
-            } else if (x < 200) {
+            } else if (x < 300) {
                 if (index <= 0) {
                     index = 6
                 }
@@ -381,11 +384,34 @@
                 slider.style.backgroundImage = "url" + "(" + imgs[index] + ")"
                 nodes[index].style.transform = "scale(1.5)"
 
-                timer2 = setTimeout(timer = setInterval(count, 3000),9000)
                 return index
             }
         }
 
+        slider.ontouchstart = function(e){
+            e.stopPropagation()
+            e.preventDefault()
+            // slider.onclick = false
+            clearInterval(timer)
+            nodes[0].style.transform = "none"
+            nodes[1].style.transform = "none"
+            nodes[2].style.transform = "none"
+            nodes[3].style.transform = "none"
+            nodes[4].style.transform = "none"
+            nodes[5].style.transform = "none"
+
+            if (index >= 5) {
+                    index = -1
+                }
+                index++
+                console.log(index);
+                slider.style.backgroundImage = "url" + "(" + imgs[index] + ")"
+                nodes[index].style.transform = "scale(1.5)"
+                timer = setInterval(count,4000)
+
+                return index
+
+        }
 
         for (i = 0; i < nodes.length; i++) {
             let x = i
@@ -404,7 +430,7 @@
             }
         }
 
-
+        
 
     </script>
 
